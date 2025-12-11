@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard · StudyExchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">StudyExchange</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <!-- Upcoming session + Reminder form -->
+    <section class="card">
+      <h2>Your upcoming 1-hour session</h2>
+      <div class="session-summary">
+        <p><strong>Partner:</strong> Demo Partner (ECE)</p>
+        <p><strong>Topic:</strong> You teach Signals & Systems · You learn HTML & CSS basics</p>
+        <p><strong>Time:</strong> Tomorrow, 5–6 PM</p>
+        <p><strong>Place:</strong> Main Library – Study Room 2</p>
+      </div>
+
+      <h3>Reminder info</h3>
+      <!-- REMINDER FORM wired to backend -->
+      <form class="form-grid"
+            action="https://formsubmit.co/hasinivajja2006@gmail.com"
+            method="POST">
+        <input type="hidden" name="formType" value="Session Reminder">
+
+        <div class="form-field">
+          <label for="reminder-email">Reminder email / phone</label>
+          <input type="text"
+                 id="reminder-email"
+                 name="contact"
+                 placeholder="e.g., yourmail@college.edu or +91…"
+                 required>
+        </div>
+        <div class="form-field">
+          <label for="reminder-time">When to remind</label>
+          <select id="reminder-time" name="reminderTime" required>
+            <option value="30 minutes before">30 minutes before</option>
+            <option value="1 hour before">1 hour before</option>
+            <option value="3 hours before">3 hours before</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-secondary full-width">
+          Save reminder preference
+        </button>
+      </form>
+      <p class="note-text">You will receive reminder data in your email. Automatic sending still needs a backend later.</p>
+    </section>
+
+    <!-- Rating form -->
+    <section class="card">
+      <h2>Rate this session</h2>
+      <form class="rating-form"
+            action="https://formsubmit.co/hasinivajja2006@gmail.com"
+            method="POST">
+        <input type="hidden" name="formType" value="Session Rating">
+
+        <div class="form-field">
+          <label>How clear was your partner's explanation?</label>
+          <div class="rating-options">
+            <label><input type="radio" name="clarity" value="1" required> 1</label>
+            <label><input type="radio" name="clarity" value="2"> 2</label>
+            <label><input type="radio" name="clarity" value="3"> 3</label>
+            <label><input type="radio" name="clarity" value="4"> 4</label>
+            <label><input type="radio" name="clarity" value="5"> 5</label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>How helpful was the session?</label>
+          <div class="rating-options">
+            <label><input type="radio" name="helpful" value="1" required> 1</label>
+            <label><input type="radio" name="helpful" value="2"> 2</label>
+            <label><input type="radio" name="helpful" value="3"> 3</label>
+            <label><input type="radio" name="helpful" value="4"> 4</label>
+            <label><input type="radio" name="helpful" value="5"> 5</label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="feedback-text">Short feedback</label>
+          <textarea id="feedback-text"
+                    name="feedback"
+                    rows="3"
+                    placeholder="Write what went well and what can improve."
+                    required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary full-width">
+          Submit rating
+        </button>
+      </form>
+    </section>
+
+    <!-- Suggestion Box -->
+    <section class="card">
+      <h2>Suggestion box</h2>
+      <form class="form-grid"
+            action="https://formsubmit.co/hasinivajja2006@gmail.com"
+            method="POST">
+        <input type="hidden" name="formType" value="Platform Suggestion">
+
+        <div class="form-field">
+          <label for="suggestion-type">Suggestion type</label>
+          <select id="suggestion-type" name="type" required>
+            <option value="Improve platform">Improve platform</option>
+            <option value="New feature">New feature</option>
+            <option value="Report an issue">Report an issue</option>
+            <option value="General feedback">General feedback</option>
+          </select>
+        </div>
+        <div class="form-field full-width">
+          <label for="suggestion-text">Your suggestion</label>
+          <textarea id="suggestion-text"
+                    name="suggestion"
+                    rows="4"
+                    placeholder="Share your idea or issue in detail."
+                    required></textarea>
+        </div>
+        <button type="submit" class="btn-secondary full-width">
+          Send suggestion
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Need help? Contact your department coordinator to manage this platform.</p>
+  </footer>
+</body>
+</html>

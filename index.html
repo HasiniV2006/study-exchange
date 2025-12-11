@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1-Hour Study Exchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">StudyExchange</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Trade 1 Hour, Learn 2 Skills</h1>
+        <p>Connect with peers and lecturers in your college for focused 1-hour study exchanges.</p>
+        <a href="dashboard.html" class="btn-primary">Go to Dashboard</a>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="info-section">
+      <h2>How it works</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>1. Create profile</h3>
+          <p>Tell what you can teach and what you want to learn.</p>
+        </div>
+        <div class="info-card">
+          <h3>2. Match & chat</h3>
+          <p>Find a partner, agree on time, place, and subject.</p>
+        </div>
+        <div class="info-card">
+          <h3>3. 1-hour session</h3>
+          <p>Meet in person, then share feedback and suggestions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="request-section">
+      <h2>Request a Study Exchange</h2>
+      <!-- This form is still front-end only for now -->
+      <form class="card form-grid">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" placeholder="Enter your full name">
+        </div>
+        <div class="form-field">
+          <label for="role">You are</label>
+          <select id="role">
+            <option>Student</option>
+            <option>Lecturer</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="teach">Skill / subject you can teach</label>
+          <input type="text" id="teach" placeholder="e.g., Signals & Systems">
+        </div>
+        <div class="form-field">
+          <label for="learn">Skill / subject you want to learn</label>
+          <input type="text" id="learn" placeholder="e.g., Web development basics">
+        </div>
+        <div class="form-field">
+          <label for="slot">Preferred time slot</label>
+          <input type="text" id="slot" placeholder="e.g., Mon 5–6 PM">
+        </div>
+        <div class="form-field">
+          <label for="place">Preferred place</label>
+          <input type="text" id="place" placeholder="e.g., Library, Room 204">
+        </div>
+        <button type="button" class="btn-primary full-width">
+          Save request (UI only)
+        </button>
+      </form>
+      <p class="note-text">Request form is UI only for now. Rating, suggestions and reminders are connected to your email.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 StudyExchange · Built for campus peer learning</p>
+  </footer>
+</body>
+</html>
